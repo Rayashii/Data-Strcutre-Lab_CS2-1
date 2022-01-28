@@ -29,16 +29,18 @@ public class oe2_yap {
             array[y+1] = ctr;
           }
     }
-    System.out.println("Unsorted array: ");
+    /*System.out.println("Unsorted array: ");
     for (x = 0; x < array.length; x++){
         System.out.print(" " + array[x]);
     }
-    System.out.println();
-    
+    System.out.println(); */  
 }
+
 System.out.println("\nSorted list of array:");
  
-    for (x = 0; x < num; x++) 
+    for (x = 0; x < num; x++) {
       System.out.print(" " + array[x]);
+        }
+    }   
 }
-}
+
