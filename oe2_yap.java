@@ -2,7 +2,13 @@ import java.util.Scanner;
 
 public class oe2_yap {
     public static void main(String[] args){
-        int num, x, j, temp;
+        int num, x, y, ctr;
+        /* 
+        num = how many numbers
+        x = array
+        y = adjacent
+        ctr
+        */
         Scanner input = new Scanner(System.in);
 
         System.out.println("Enter the number of integers to be Bubble Sorted:");
@@ -16,11 +22,11 @@ public class oe2_yap {
       array[x] = input.nextInt();
 
       for (x = 0; x < ( num - 1 ); x++) {
-        for (j = 0; j < num - x - 1; j++) {
-          if (array[j] > array[j+1]) {
-            temp = array[j];
-            array[j] = array[j+1];
-            array[j+1] = temp;
+        for (y = 0; y < num - x - 1; y++) {
+          if (array[y] > array[y+1]) {
+            ctr = array[y];
+            array[y] = array[y+1];
+            array[y+1] = ctr;
           }
     }
     System.out.println("Unsorted array: ");
