@@ -1,0 +1,45 @@
+import java.util.Scanner;
+import java.util.Map;
+import java.util.HashMap;
+
+public class oe7_yap {
+    public static void main(String[] args) {
+        Map<String, String> students = new HashMap<>();
+        Scanner s = new Scanner(System.in);
+        String studentNumber, studentName;
+        
+  
+        for (int i = 1; i < 2; i++) {
+        System.out.print("Enter Student Number " + i + ": ");
+        studentNumber = s.nextLine();
+        System.out.print("Enter Student Name " + i + ": ");
+        studentName = s.nextLine();
+        students.put(studentNumber, studentName);
+        }
+
+        System.out.print("Enter Student Number: ");
+        studentNumber = s.nextLine();
+        System.out.print("Enter Student Name: ");
+        studentName = s.nextLine();
+        students.put(studentNumber, studentName);
+
+        System.out.println("\nStudent List: \n");
+        for(Map.Entry entry: students.entrySet()) {
+            System.out.println(entry.getKey() + " " + entry.getValue());
+        }
+
+        students.remove(studentNumber, studentName);
+
+        System.out.println("\nDo you want search someone's name on the record? [1 for Yes | 2 for No]: ");
+        int searchValue = s.nextInt();
+
+        if (searchValue == 1) {
+            System.out.println("Enter the Student Number of the Student: ");
+        } else if (searchValue == 2) {
+            System.exit(0);
+        } else {
+            System.exit(0);
+        }
+    }
+}
+
